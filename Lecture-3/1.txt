@@ -89,3 +89,33 @@ PS D:\WEB DEV III\Lecture-3> npm run start
 
 8
 2
+
+-----at git-----
+PS D:\WEB DEV III\Lecture-3> cd ..
+PS D:\WEB DEV III> git init
+Initialized empty Git repository in D:/WEB DEV III/.git/
+PS D:\WEB DEV III> git add .
+warning: in the working copy of 'Lecture-3/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Lecture-3/package.json', LF will be replaced by CRLF the next time Git touches it
+PS D:\WEB DEV III> git commit -m "first commit"
+>> git branch -M main
+>> git remote add origin https://github.com/Bhavishka007/WEB-DEV-III.git
+>> git push -u origin main
+[master (root-commit) de37075] first commit
+ 6 files changed, 490 insertions(+)
+ create mode 100644 Lecture-3/.gitignore
+ create mode 100644 Lecture-3/1.txt
+ create mode 100644 Lecture-3/maths.js
+ create mode 100644 Lecture-3/package-lock.json
+ create mode 100644 Lecture-3/package.json
+ create mode 100644 Lecture-3/script.js
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 4.82 KiB | 705.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Bhavishka007/WEB-DEV-III.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
