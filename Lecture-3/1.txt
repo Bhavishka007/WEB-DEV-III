@@ -1,0 +1,91 @@
+PS D:\WEB DEV III\Lecture-3> npm init -y
+Wrote to D:\WEB DEV III\Lecture-3\package.json:
+
+{
+  "name": "lecture-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+
+PS D:\WEB DEV III\Lecture-3> npm i axios
+
+added 27 packages, and audited 28 packages in 4s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS D:\WEB DEV III\Lecture-3> node .\script.js
+helllo world
+PS D:\WEB DEV III\Lecture-3> npm run start
+
+> lecture-3@1.0.0 start
+> node script.js
+
+helllo world
+PS D:\WEB DEV III\Lecture-3> npm run start
+
+> lecture-3@1.0.0 start
+> node script.js
+
+NaN
+helllo world
+PS D:\WEB DEV III\Lecture-3> npm run start
+
+> lecture-3@1.0.0 start
+> node script.js
+
+8
+helllo world
+
+PS D:\WEB DEV III\Lecture-3> npm run start
+
+> lecture-3@1.0.0 start
+> node script.js
+
+8
+2
+helllo world
+
+PS D:\WEB DEV III\Lecture-3> npm run start
+
+> lecture-3@1.0.0 start
+> node script.js
+
+(node:17900) Warning: Failed to load the ES module: D:\WEB DEV III\Lecture-3\script.js. Make sure to set "type": "module" in the nearest package.json file or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+D:\WEB DEV III\Lecture-3\script.js:17
+import {add,subtract} from './maths.js';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe (node:internal/modules/cjs/loader:1692:18)
+    at Module._compile (node:internal/modules/cjs/loader:1735:20)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+    ye error isliye aya bcz packahe.json mein type =module karna hoga
+
+Node.js v24.13.0
+PS D:\WEB DEV III\Lecture-3> npm run start
+
+> lecture-3@1.0.0 start
+> node script.js
+
+8
+2
