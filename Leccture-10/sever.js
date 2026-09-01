@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-//middleware
+//middleware to parse json request bodies
 app.use(express.json());
 
 const employees = [
@@ -13,17 +13,19 @@ const employees = [
   { id: 5, name: 'David Wilson', salary:750000, position: 'DevOps Engineer' }
 ];
 
+//read opt
 app.get('/employees', (req, res) => {
   res.json(employees);
 });
 
+//employee get by their id
 app.get("/employees/:id", (req, res) => {
   const id=req.params.id;
-  const employee=employees.find(emp=>emp.id==id);
+  const employee=employees.find(employee=>employee.empId==Number(id));
   if(!employee){
     res.status(404).json({message:"Employee not found"});
   }
-  res.json(employee);
+  res.json({success:true,employee});
 });
 
 app.post("/employees",(req,res)=>{
