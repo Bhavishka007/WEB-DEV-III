@@ -5,13 +5,13 @@ const PORT=3000
 
 app.use(morgan());
 
-// const logMiddleware=(req,res,next)=>{
-//     //console.log(req.name)
-//     req.name="John Doe"; 
-//     console.log(`Method:${req.method} URL:${req.url} Time: ${new Date().toLocaleString()}`) //or ("Request url:",req.url,"Request method:",req.method);
-//     //res,send("Hello from middleware")  
-//     next();
-// }
+const logMiddleware=(req,res,next)=>{
+    //console.log(req.name)
+    req.name="John Doe"; 
+    console.log(`Method:${req.method} URL:${req.url} Time: ${new Date().toLocaleString()}`) //or ("Request url:",req.url,"Request method:",req.method);
+    //res.send("Hello from middleware")  
+    next();
+}
 //morgan is replaceable of upeer commited code
 
 
@@ -24,8 +24,8 @@ const apiCheckMiddleware=(req,res,next)=>{
     }
 }
  
-// app.use(logMiddleware);
-app.use(apiCheckMiddleware);
+app.use(logMiddleware);
+//app.use(apiCheckMiddleware); //globlal midleware
 
 
 app.get("/",(req,res)=>{
@@ -34,7 +34,7 @@ app.get("/",(req,res)=>{
     res.send("Radhe Radhe");
 })
 
-app.get("/data",(req,res)=>{
+app.get("/data",(req,res)=>{     //route level middleware
     console.log("Hello Data");
     res.json({
         city:"New York",
